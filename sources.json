@@ -1,0 +1,117 @@
+{
+  "window_days": 7,
+  "user_agent": "Mozilla/5.0 (X11; Linux aarch64) ai-radar-collector/0.1",
+  "timeout_seconds": 20,
+  "hn": {
+    "enabled": true,
+    "min_points": 80,
+    "max_hits": 200
+  },
+  "reddit": {
+    "enabled": false,
+    "disabled_reason": "awaiting Reddit Data API approval (Developer Terms: approval required before any API access, incl. RSS/.json)",
+    "mode": "auto",
+    "groups": [
+      [
+        "LocalLLaMA",
+        "singularity",
+        "OpenAI",
+        "ClaudeAI"
+      ],
+      [
+        "MachineLearning",
+        "dataengineering",
+        "LLMDevs"
+      ]
+    ],
+    "limit": 25,
+    "rss_limit": 100,
+    "rss_pause_seconds": 20,
+    "rss_retries": 3,
+    "rss_retry_wait_seconds": 30,
+    "_comment": "DISABLED pending Reddit Data API approval. Do not enable anonymous RSS/.json. After approval: OAuth only (REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET) and remove the RSS fallback."
+  },
+  "huggingface": {
+    "enabled": true,
+    "limit": 15
+  },
+  "github": {
+    "enabled": true,
+    "topics": [
+      "llm",
+      "ai-agents",
+      "mcp",
+      "generative-ai"
+    ],
+    "min_stars": 150,
+    "_comment": "Repos created within the window, sorted by stars. Optional GITHUB_TOKEN raises rate limits."
+  },
+  "lobsters": {
+    "enabled": true,
+    "tags": [
+      "ai",
+      "vibecoding"
+    ]
+  },
+  "feeds": [
+    {
+      "name": "OpenAI",
+      "url": "https://openai.com/news/rss.xml",
+      "kind": "lab"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "kind": "lab"
+    },
+    {
+      "name": "Google AI",
+      "url": "https://blog.google/technology/ai/rss/",
+      "kind": "lab"
+    },
+    {
+      "name": "Mistral",
+      "url": "https://mistral.ai/rss.xml",
+      "kind": "lab"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "kind": "lab"
+    },
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/",
+      "kind": "curator"
+    },
+    {
+      "name": "Latent Space",
+      "url": "https://www.latent.space/feed",
+      "kind": "curator"
+    },
+    {
+      "name": "Import AI",
+      "url": "https://importai.substack.com/feed",
+      "kind": "curator"
+    },
+    {
+      "name": "TLDR AI",
+      "url": "https://tldr.tech/api/rss/ai",
+      "kind": "curator"
+    },
+    {
+      "name": "Techmeme",
+      "url": "https://www.techmeme.com/feed.xml",
+      "kind": "news"
+    },
+    {
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "kind": "news"
+    }
+  ],
+  "anthropic": {
+    "enabled": true,
+    "_comment": "No RSS; scrapes anthropic.com/news cards."
+  }
+}
